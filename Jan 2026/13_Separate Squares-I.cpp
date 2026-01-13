@@ -1,3 +1,17 @@
+// LeetCode POTD - Jan 13, 2026
+// Problem: 3453 - Separate Squares I
+// Technique: Binary Search on Answer + Geometry
+//
+// Idea:
+// We binary search on y-coordinate of a horizontal line.
+// For a given y = mid, compute area of all square parts below it.
+// If area_below >= total_area/2, move the line up.
+// Otherwise move it down.
+//
+// Time: O(n * log(range))
+// Space: O(1)
+
+
 class Solution {
 public:
     bool check(vector<vector<int>>& squares, double mid_y, double total) 
