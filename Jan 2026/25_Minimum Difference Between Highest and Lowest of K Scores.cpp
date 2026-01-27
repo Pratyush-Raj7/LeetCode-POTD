@@ -1,3 +1,17 @@
+/*
+Intuition:
+After sorting, the best k scores will always form a consecutive window.
+Checking all such windows gives the minimum possible max-min difference.
+
+Approach:
+- Sort the array
+- Slide a window of size k
+- Track minimum (nums[i]) and maximum (nums[i+k-1])
+
+Time: O(n log n)
+Space: O(1)
+*/
+
 class Solution {
 public:
     int minimumDifference(vector<int>& nums, int k) {
